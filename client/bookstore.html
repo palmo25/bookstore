@@ -1,0 +1,44 @@
+<head>
+  <title>bookstore</title>
+</head>
+
+<body>
+  <div class="container">
+  <h1>Welcome to Bookstore!</h1>
+  </div>
+ 
+
+  
+
+</body>
+
+<template name="bookform">
+  <a href="/books">Book Catalog</a>
+<a href="/edizione">Add Edizione</a>
+  <form class="form-inline">
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input type="text" class="form-control" id="title" placeholder="I promessi sposi" required>
+  </div>
+  <div class="form-group">
+    <label for="author">Author</label>
+    <input type="text" class="form-control" id="author" placeholder="Alessandro Manzoni">
+  </div>
+  <div class="form-group">
+    <label for="genere">Genere</label>
+    <input type="text" class="form-control" id="genere" >
+  </div>
+  <select class="form-control" id="edizioni">
+    <label for="edizioni">Edizioni</label>
+    <option>Seleziona editore</option>
+   {{#each edizioni}}
+    <option>
+    {{nome}}
+     </option>
+    {{/each}}
+   
+  </select>
+  <button type="submit" class="btn btn-primary">Add book</button>
+</form>
+
+</template>

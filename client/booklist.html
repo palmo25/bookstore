@@ -1,0 +1,32 @@
+
+
+
+<template name="booklist">
+  <a href="/">Add Book</a>
+  <a href="/edizione">Add Edizione</a>
+	<table class="table table-striped">
+<thead>
+ <tr>
+  <th>Author</th>
+  <th>Title</th>
+  <th>Genere</th>
+  <th>Edizioni</th>
+  <th>Delete</th>
+  <th>View</th>
+ </tr>
+</thead>
+<tbody>         
+ {{#each books}}
+    <tr>
+	<td>{{author}}</td> 
+     <td>{{title}}</td> 
+     <td>{{genere}}</td>
+     <td>{{edizione}}</td>
+    <td><input type="button" class="remove" value="Remove Book"></td>
+    <td><button class="view">View</button></td>
+    </tr>
+ {{/each}}       
+</tbody>
+</table>
+
+</template>

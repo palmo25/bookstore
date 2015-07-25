@@ -1,0 +1,22 @@
+
+
+<template name="edizionilist">
+  <a href="/">Add Book</a>
+  <a href="/edizione">Add Edizione</a>
+	<table class="table table-striped">
+<thead>
+ <tr>
+  <th>Edizione</th>
+  <th>Remove</th>
+ </tr>
+</thead>
+<tbody>         
+ {{#each edizioni}}
+    <tr>
+	<td>{{nome}}</td> 
+    <td><input type="button" class="remove" value="Remove Book"></td> 
+    </tr>
+ {{/each}}       
+</tbody>
+</table>
+</template>
